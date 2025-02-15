@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import { CSSProperties, memo } from "react";
 
 type StarProps = {
   fill: boolean;
@@ -22,6 +22,8 @@ const Star = ({
     width: `${size}px`,
     cursor: "pointer",
   };
+
+  console.log("render star", index);
 
   return (
     <span
@@ -58,4 +60,4 @@ const Star = ({
   );
 };
 
-export default Star;
+export default memo(Star);
